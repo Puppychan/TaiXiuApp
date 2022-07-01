@@ -47,7 +47,7 @@ func inputBet() -> String {
 func rollDices() -> Int {
     let dices = [0, 0, 0].map {_ in Int.random(in: 1...6)}
     print("The dices are:", dices.map{String($0)}.joined(separator: " "))
-    var total = dices.reduce(0, {x, y in x + y})
+    var total = dices.reduce(0, {x,y in x + y})
     print("The sum of dices is \(total)")
     // mark that this contain 3 same number on dices
     if (dices.indices.filter{dices[0] == dices[$0]}.count == dices.count) {
